@@ -8,7 +8,7 @@ import tiktoken
 import os
 api_key = os.environ['OPENAI_API_KEY']
 
-with open(path.join('kursSCORM','course.json'), 'r') as f:
+with open(path.join('kursSCORM', 'course.json'), 'r') as f:
     data = json.load(f)
 
 #Объект токенизации для подсчета токенов
@@ -52,5 +52,5 @@ print(soup.prettify())
 
 data['sections']['module2']['blocks']['uxfKBSpMMc']['html'] = translated_html
 
-with open(path.join('kursSCORM','course.json'), 'w') as f:
+with open(path.join('kursSCORM', 'course.json'), 'w') as f:
     json.dump(data, f)
